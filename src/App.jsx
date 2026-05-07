@@ -52,7 +52,10 @@ const technologies = [
 ];
 
 const gallery = [
-  ["Instalaciones Shelly", "images/shelly-installation.svg", "Instalación Shelly profesional en Madrid"],
+  ["Instalaciones Shelly", "images/shelly-luces-instalacion.jpg", "Instalación Shelly para control de luces en Madrid"],
+  ["Medición con Shelly Plug", "images/shelly-plug-consumo.jpg", "Control y medición de electrodomésticos con Shelly Plug"],
+  ["Control de luces desde móvil", "images/control-luces-app.jpg", "Control de iluminación desde el móvil en vivienda inteligente"],
+  ["Home automation básico", "images/basic-home-automation.jpg", "Automatización básica de vivienda con móvil y dispositivos inteligentes"],
   ["KNX", "images/knx-installation.svg", "Instalación KNX para vivienda inteligente"],
   ["Loxone", "images/loxone-installation.svg", "Integración Loxone para domótica residencial"],
   ["Cuadros eléctricos", "images/electrical-panel.svg", "Cuadro eléctrico ordenado y documentado"],
@@ -60,6 +63,7 @@ const gallery = [
   ["Home Assistant dashboards", "images/home-assistant-dashboard.svg", "Panel de Home Assistant para casa inteligente"],
   ["Cableado ordenado", "images/domotic-wiring.svg", "Cableado domótico ordenado en instalación profesional"],
   ["Automatización de garaje", "images/garage-automation.svg", "Automatización de garaje con móvil y sensores"],
+  ["Imagen corporativa TechZen", "images/techzen-smart-home-brand.jpg", "Imagen corporativa de TechZen Smart Homes para domótica residencial"],
 ];
 
 const services = [
@@ -302,6 +306,7 @@ function HomePage() {
       <Authority />
       <Partners />
       <CoreServices />
+      <VideoShowcase />
       <VisualProof />
       <Cases />
       <Method />
@@ -423,6 +428,36 @@ function VisualProof() {
         ))}
       </div>
     </Section>
+  );
+}
+
+function VideoShowcase() {
+  return (
+    <section className="band">
+      <div className="container grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div>
+          <p className="eyebrow"><Camera size={16} /> Vídeo demo</p>
+          <h2 className="mt-5 text-3xl font-semibold sm:text-4xl">Domótica en acción: control rápido desde el móvil</h2>
+          <p className="mt-5 text-lg leading-8 text-slate-300">
+            Un vídeo corto ayuda a enseñar de forma directa cómo una vivienda puede controlar luces, enchufes, escenas y automatizaciones. Está cargado en formato MP4, con reproducción silenciosa, automática y compatible con móvil.
+          </p>
+          <CtaGroup className="mt-8" />
+        </div>
+        <div className="video-frame">
+          <video
+            src={asset("videos/techzen-demo-domotica.mp4")}
+            poster={asset("images/techzen-circuit-brand.jpg")}
+            controls
+            muted
+            autoPlay
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="Vídeo corto de domótica TechZen Smart Homes"
+          />
+        </div>
+      </div>
+    </section>
   );
 }
 

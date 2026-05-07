@@ -286,6 +286,14 @@
   .floating-whatsapp {
     @apply fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full bg-cyan px-5 py-3 text-sm font-bold text-ink shadow-glow transition hover:bg-white;
   }
+
+  .video-frame {
+    @apply overflow-hidden rounded-3xl border border-cyan/25 bg-black shadow-glow;
+  }
+
+  .video-frame video {
+    @apply aspect-video w-full bg-black object-cover;
+  }
 }
 
 .hero-grid {
