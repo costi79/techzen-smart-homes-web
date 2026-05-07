@@ -1,0 +1,21 @@
+<svg width="420" height="120" viewBox="0 0 420 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">TechZen Smart Homes</title>
+  <desc id="desc">Logo de TechZen Smart Homes con casa, circuito y señal domótica</desc>
+  <rect width="420" height="120" rx="24" fill="#070B12"/>
+  <path d="M35 64L68 36L101 64V94H43V64H35Z" fill="#0D1420" stroke="#27E5FF" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M61 94V70H78V94" stroke="#1E7BFF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M90 42C100 46 107 55 109 66" stroke="#27E5FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M101 28C118 35 129 50 132 68" stroke="#1E7BFF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M73 48L63 68H76L68 87L90 59H76L85 48H73Z" fill="#27E5FF"/>
+  <circle cx="122" cy="82" r="5" fill="#27E5FF"/>
+  <path d="M101 82H122" stroke="#27E5FF" stroke-width="3" stroke-linecap="round"/>
+  <text x="150" y="57" fill="white" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">TechZen</text>
+  <text x="152" y="84" fill="#B7C4D6" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="600" letter-spacing="2">SMART HOMES</text>
+  <path d="M152 94H305" stroke="url(#paint0_linear)" stroke-width="3" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="152" y1="94" x2="305" y2="94" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E7BFF"/>
+      <stop offset="1" stop-color="#27E5FF"/>
+    </linearGradient>
+  </defs>
+</svg>

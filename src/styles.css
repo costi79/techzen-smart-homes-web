@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: #070b12;
+  }
+
+  ::selection {
+    background: rgba(39, 229, 255, 0.3);
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-20 sm:py-24;
+  }
+
+  .band {
+    @apply border-y border-white/10 bg-[#0a111c] py-16 sm:py-20;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-cyan/25 bg-cyan/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.14em] text-cyan;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-cyan text-ink shadow-glow hover:bg-white;
+  }
+
+  .btn-secondary {
+    @apply border border-cyan/40 bg-cyan/10 text-white hover:border-cyan hover:bg-cyan/20;
+  }
+
+  .btn-ghost {
+    @apply border border-white/15 text-white hover:border-white/40 hover:bg-white/10;
+  }
+
+  .mini-proof {
+    @apply flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-slate-200;
+  }
+
+  .device-panel {
+    @apply rounded-[2rem] border border-white/10 bg-panel/90 p-6 shadow-glow backdrop-blur-xl sm:p-8;
+  }
+
+  .metric {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] p-4;
+  }
+
+  .metric svg {
+    @apply text-cyan;
+  }
+
+  .metric span {
+    @apply mt-3 block text-sm text-slate-400;
+  }
+
+  .metric strong {
+    @apply mt-1 block text-base font-semibold text-white;
+  }
+
+  .smart-card,
+  .case-card,
+  .step-card,
+  .contact-card,
+  .feature-block,
+  .faq-item {
+    @apply border border-white/10 bg-white/[0.045] shadow-[0_16px_60px_rgba(0,0,0,0.22)] backdrop-blur;
+  }
+
+  .smart-card {
+    @apply rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan/40 hover:bg-white/[0.07];
+  }
+
+  .smart-card-large {
+    @apply p-7;
+  }
+
+  .smart-card h3,
+  .case-card h3,
+  .step-card h3 {
+    @apply mt-5 text-xl font-semibold text-white;
+  }
+
+  .smart-card p,
+  .case-card p,
+  .step-card p,
+  .feature-block p {
+    @apply mt-3 text-sm leading-7 text-slate-300;
+  }
+
+  .icon-wrap {
+    @apply inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan/25 bg-cyan/10 text-cyan;
+  }
+
+  .feature-block {
+    @apply rounded-2xl p-7;
+  }
+
+  .feature-block svg {
+    @apply text-cyan;
+  }
+
+  .feature-block h2 {
+    @apply mt-5 text-2xl font-semibold;
+  }
+
+  .case-card {
+    @apply rounded-2xl p-7;
+  }
+
+  .case-card span,
+  .step-card span {
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-full bg-cyan text-sm font-bold text-ink;
+  }
+
+  .step-card {
+    @apply rounded-2xl p-6;
+  }
+
+  .faq-item {
+    @apply rounded-2xl p-6;
+  }
+
+  .faq-item summary {
+    @apply cursor-pointer list-none text-lg font-semibold text-white;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item p {
+    @apply mt-4 leading-7 text-slate-300;
+  }
+
+  .contact-section {
+    @apply border-t border-white/10 bg-[radial-gradient(circle_at_20%_20%,rgba(30,123,255,0.16),transparent_32%),#070b12] py-20 sm:py-24;
+  }
+
+  .contact-card {
+    @apply rounded-3xl p-5 sm:p-7;
+  }
+
+  .contact-action {
+    @apply flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-5 text-white transition hover:border-cyan/40 hover:bg-cyan/10;
+  }
+
+  .contact-action + .contact-action {
+    @apply mt-4;
+  }
+
+  .contact-action svg {
+    @apply shrink-0 text-cyan;
+  }
+
+  .contact-action strong {
+    @apply block text-base;
+  }
+
+  .contact-action small {
+    @apply mt-1 block text-sm text-slate-400;
+  }
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(39, 229, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(39, 229, 255, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 78%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .device-panel {
+    animation: float-panel 7s ease-in-out infinite;
+  }
+
+  .smart-card,
+  .case-card,
+  .step-card,
+  .feature-block {
+    animation: soft-rise 0.7s ease both;
+  }
+}
+
+@keyframes float-panel {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes soft-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
