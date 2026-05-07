@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://costi79.github.io/techzen-smart-homes-web/sitemap.xml

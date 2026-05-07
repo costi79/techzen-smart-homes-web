@@ -33,6 +33,14 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Validate generated SEO files
+        run: |
+          test -f dist/sitemap.xml
+          test -f dist/robots.txt
+          test -f dist/servicios/knx-madrid/index.html
+          test -f dist/servicios/shelly-madrid/index.html
+          test -f dist/blog/que-es-knx-vivienda/index.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
