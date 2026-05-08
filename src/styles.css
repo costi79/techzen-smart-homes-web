@@ -77,12 +77,14 @@
   }
 
   .smart-card,
+  .service-card,
   .case-card,
   .step-card,
   .contact-card,
   .feature-block,
   .faq-item,
   .authority-panel,
+  .mini-panel,
   .logo-card,
   .gallery-card,
   .post-card {
@@ -91,6 +93,42 @@
 
   .smart-card {
     @apply rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan/40 hover:bg-white/[0.07];
+  }
+
+  .service-card {
+    @apply rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan/40 hover:bg-white/[0.07];
+  }
+
+  .service-card h3 {
+    @apply mt-5 text-xl font-semibold text-white;
+  }
+
+  .service-card p {
+    @apply mt-3 text-sm leading-7 text-slate-300;
+  }
+
+  .service-card ul {
+    @apply mt-5 grid gap-2;
+  }
+
+  .service-card li {
+    @apply flex items-center gap-2 text-sm text-slate-300;
+  }
+
+  .service-card li svg {
+    @apply shrink-0 text-cyan;
+  }
+
+  .mini-panel {
+    @apply rounded-2xl p-5;
+  }
+
+  .mini-panel h3 {
+    @apply text-lg font-semibold text-white;
+  }
+
+  .mini-panel p {
+    @apply mt-2 text-sm leading-6 text-slate-300;
   }
 
   .smart-card-large {
@@ -220,7 +258,68 @@
   }
 
   .gallery-card figcaption {
-    @apply border-t border-white/10 px-4 py-3 text-sm font-semibold text-slate-200;
+    @apply border-t border-white/10 p-4;
+  }
+
+  .gallery-card figcaption small {
+    @apply text-xs font-semibold uppercase tracking-[0.14em] text-cyan;
+  }
+
+  .gallery-card figcaption strong {
+    @apply mt-2 block text-base font-semibold text-white;
+  }
+
+  .gallery-card figcaption span {
+    @apply mt-2 block text-sm leading-6 text-slate-300;
+  }
+
+  .gallery-actions {
+    @apply mt-4 flex flex-wrap gap-2;
+  }
+
+  .gallery-actions button,
+  .gallery-actions a {
+    @apply rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-slate-200 transition hover:border-cyan/40 hover:text-cyan;
+  }
+
+  .filter-row {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .filter-button {
+    @apply rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-semibold text-slate-300 transition hover:border-cyan/40 hover:text-cyan;
+  }
+
+  .filter-button.active {
+    @apply border-cyan bg-cyan text-ink;
+  }
+
+  .photo-placeholder {
+    @apply flex aspect-[4/3] w-full flex-col items-center justify-center gap-3 bg-[#0d1420] p-6 text-center text-slate-300;
+  }
+
+  .photo-placeholder svg {
+    @apply text-cyan;
+  }
+
+  .photo-placeholder.large {
+    @apply aspect-video min-h-72;
+  }
+
+  .lightbox {
+    @apply fixed inset-0 z-[80] flex items-center justify-center bg-black/80 p-4 backdrop-blur;
+  }
+
+  .lightbox-card {
+    @apply relative max-h-[92vh] w-full max-w-5xl overflow-auto rounded-3xl border border-white/10 bg-panel shadow-glow;
+  }
+
+  .lightbox-card img {
+    @apply max-h-[68vh] w-full object-contain bg-black;
+  }
+
+  .lightbox-close {
+    @apply absolute right-4 top-4 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition hover:border-cyan hover:text-cyan;
   }
 
   .text-link {
@@ -237,6 +336,18 @@
 
   .benefit-list svg {
     @apply shrink-0 text-cyan;
+  }
+
+  .example-line {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] p-4 leading-7 text-slate-200;
+  }
+
+  .service-image {
+    @apply aspect-[4/3] w-full rounded-3xl border border-white/10 bg-white/[0.04] object-cover shadow-glow;
+  }
+
+  .zone-pill {
+    @apply rounded-full border border-cyan/20 bg-cyan/10 px-4 py-2 text-sm font-semibold text-cyan;
   }
 
   .internal-links {

@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://costi79.github.io/techzen-smart-homes-web/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/domotica-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/knx-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/shelly-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/loxone-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/home-assistant-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/contacto</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/electricista-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/electricista-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/cuadros-electricos-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/automatizacion-garaje-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/cuadros-electricos-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/domotica-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/domotica-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/shelly-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/instalacion-shelly-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/knx-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/knx-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/loxone-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/loxone-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/home-assistant-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/home-assistant-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/iluminacion-inteligente-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/persianas-estores-motorizados-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/climatizacion-inteligente-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/seguridad-sensores-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/medicion-consumo-electrico-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/automatizacion-garaje-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://costi79.github.io/techzen-smart-homes-web/servicios/mantenimiento-domotica-madrid</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://costi79.github.io/techzen-smart-homes-web/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://costi79.github.io/techzen-smart-homes-web/blog/que-es-knx-vivienda</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://costi79.github.io/techzen-smart-homes-web/blog/shelly-madrid-luces-persianas-garaje</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
