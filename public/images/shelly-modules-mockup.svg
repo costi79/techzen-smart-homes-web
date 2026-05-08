@@ -1,0 +1,19 @@
+<svg width="900" height="675" viewBox="0 0 900 675" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Mockup de modulos Shelly</title>
+<desc id="desc">Visual propio de TechZen con modulos Shelly tipo rele, carril DIN y medicion de consumo.</desc>
+<rect width="900" height="675" fill="#07111F"/>
+<rect x="70" y="74" width="760" height="520" rx="34" fill="#0D1420" stroke="#27E5FF" stroke-opacity=".35" stroke-width="3"/>
+<rect x="115" y="155" width="190" height="190" rx="34" fill="#0BA5E9"/>
+<text x="210" y="250" text-anchor="middle" fill="#fff" font-family="Arial" font-size="34" font-weight="900">PLUS</text>
+<g stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"><path d="M145 385h130"/><path d="M162 415h96"/></g>
+<rect x="360" y="120" width="230" height="330" rx="18" fill="#111B2B" stroke="#27E5FF" stroke-opacity=".55" stroke-width="4"/>
+<text x="475" y="165" text-anchor="middle" fill="#27E5FF" font-family="Arial" font-size="22" font-weight="800">PRO DIN</text>
+<g fill="#1E7BFF"><rect x="392" y="205" width="48" height="128" rx="8"/><rect x="452" y="205" width="48" height="128" rx="8"/><rect x="512" y="205" width="48" height="128" rx="8"/></g>
+<path d="M395 385h160" stroke="#27E5FF" stroke-width="7" stroke-linecap="round"/>
+<rect x="650" y="165" width="130" height="210" rx="18" fill="#101A28" stroke="#27E5FF" stroke-opacity=".5" stroke-width="4"/>
+<circle cx="715" cy="255" r="38" fill="#27E5FF" fill-opacity=".15" stroke="#27E5FF" stroke-width="5"/>
+<path d="M690 315h50" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+<text x="715" y="420" text-anchor="middle" fill="#fff" font-family="Arial" font-size="24" font-weight="800">EM / Pro EM</text>
+<path d="M210 500h500" stroke="#27E5FF" stroke-width="5" stroke-dasharray="12 14" stroke-linecap="round"/>
+<text x="450" y="560" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="34" font-weight="900">Reles, cuadro DIN y medicion de consumo</text>
+</svg>

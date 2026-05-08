@@ -143,6 +143,14 @@ const serviceData = [
     benefits: ["Automatización con obra mínima", "Control local y remoto con escenas", "Medición de consumo con Shelly EM, Pro EM o Plug", "Integración con MQTT, Home Assistant y asistentes", "Opciones DIN para cuadros eléctricos profesionales"],
     examples: ["Automatizar luces sin cambiar toda la instalación", "Medir dos circuitos y detectar consumos anómalos", "Controlar persianas por horario, sol o temperatura", "Usar Shelly Pro en cuadro para cargas ordenadas y documentadas"],
     process: ["Revisión de mecanismos, cuadro y cobertura", "Selección de módulo Shelly según carga y uso", "Instalación, configuración local, pruebas y explicación"],
+    componentsTitle: "Módulos Shelly y funcionamiento práctico",
+    components: [
+      "Shelly Plus detrás de mecanismos para luces, enchufes o persianas cuando hay espacio y cableado compatible.",
+      "Shelly Pro en carril DIN para cuadros eléctricos más ordenados, cargas centralizadas y mantenimiento profesional.",
+      "Shelly EM o Pro EM para medir consumos, detectar picos y crear avisos o automatizaciones de ahorro.",
+      "Escenas locales, horarios, control desde móvil e integración con Home Assistant sin perder el uso del pulsador físico.",
+    ],
+    componentImage: "images/shelly-modules-mockup.svg",
     faqs: [
       ["¿Shelly funciona sin Internet?", "Muchos usos pueden funcionar en red local, especialmente si se integra con Home Assistant."],
       ["¿Es seguro meter un relé detrás de un mecanismo?", "Sí, si hay espacio, cableado correcto, carga compatible y se instala con criterio eléctrico."],
@@ -162,6 +170,14 @@ const serviceData = [
     benefits: ["Estándar abierto y profesional", "Más de 500 fabricantes y miles de productos certificados", "Ideal para obra nueva o reforma integral", "Muy robusto para viviendas premium", "Integrable con Home Assistant, pantallas y visualizaciones"],
     examples: ["Pulsadores KNX que controlan luz, persianas y escenas", "Climatización por zonas con sensores", "Escena salida que apaga, baja persianas y activa seguridad", "Cuadro KNX documentado para futuras ampliaciones"],
     process: ["Diseño de arquitectura KNX y funciones", "Planificación de bus, cuadros y cableado", "Programación ETS, pruebas, documentación y entrega"],
+    componentsTitle: "Actuadores, sensores y botoneras KNX",
+    components: [
+      "Actuadores KNX en cuadro para controlar iluminación, persianas, climatización, válvulas o cargas por zonas.",
+      "Pulsadores y botoneras táctiles KNX, por ejemplo tipo JUNG, para escenas, regulación, persianas y modos de vivienda.",
+      "Pantallas táctiles y visualizaciones para centralizar estados, temperaturas, luces, persianas, alarmas técnicas y escenas.",
+      "Bus KNX cableado, programación ETS y documentación para que la instalación sea ampliable y mantenible durante años.",
+    ],
+    componentImage: "images/knx-components-mockup.svg",
     faqs: [
       ["¿KNX es mejor que Shelly?", "No siempre. KNX es ideal en proyectos cableados y reformas importantes; Shelly encaja muy bien en viviendas existentes."],
       ["¿Puedo tener KNX y Home Assistant?", "Sí. Home Assistant puede aportar paneles e integraciones sobre una base KNX robusta."],
@@ -181,6 +197,14 @@ const serviceData = [
     benefits: ["Control centralizado con Miniserver", "Automatizaciones avanzadas sin depender de acciones constantes", "Buen enfoque para viviendas premium y proyectos escalables", "Escenas, sombreado, clima y eficiencia energética conectados", "Opciones cableadas y ampliables para reformas o obra nueva"],
     examples: ["Escena cine con luces reguladas y persianas", "Control de clima por presencia, horario y temperatura", "Automatizaciones de ahorro energético con cargas no prioritarias", "Sombreado automático para reducir calor y consumo"],
     process: ["Definir objetivos y lógica de automatización", "Diseño de entradas, salidas, extensiones y escenas", "Configuración, ajuste fino en vivienda y explicación al cliente"],
+    componentsTitle: "Miniserver, extensiones y lógica Loxone",
+    components: [
+      "Miniserver como cerebro central para coordinar iluminación, persianas, climatización, accesos, seguridad y energía.",
+      "Extensiones de entradas y salidas para sensores, pulsadores, relés, dimmers, válvulas, motores y medición.",
+      "Botoneras y superficies táctiles para manejar escenas sin depender del móvil: salir, noche, cine, confort o vacaciones.",
+      "Automatizaciones por presencia, horario, temperatura, consumo y sombreado para que la vivienda reaccione sola.",
+    ],
+    componentImage: "images/loxone-components-mockup.svg",
     faqs: [
       ["¿Loxone sustituye a otros sistemas?", "Puede funcionar como sistema principal o integrarse con otras soluciones según el proyecto."],
       ["¿Es una solución para vivienda premium?", "Sí, especialmente cuando se busca control centralizado y automatización muy integrada."],
@@ -973,6 +997,17 @@ function ServicePage({ service }) {
           {service.process.map((item, index) => <div className="step-card" key={item}><span>{index + 1}</span><h3>{item}</h3><p>Lo hacemos con criterios de seguridad, claridad y mantenimiento para que la instalación sea útil desde el primer día.</p></div>)}
         </div>
       </ContentBlock>
+      {service.components && (
+        <ContentBlock title={service.componentsTitle || "Componentes y funcionamiento"}>
+          <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+            <div className="component-list">
+              {service.components.map((item) => <p className="example-line" key={item}><CheckCircle2 size={18} />{item}</p>)}
+              <p className="mt-5 text-sm leading-7 text-slate-400">Visual propio de TechZen preparado para sustituir por fotos oficiales autorizadas o fotos reales de tus instalaciones cuando las tengas.</p>
+            </div>
+            <img className="service-image" src={asset(service.componentImage)} alt={`${service.componentsTitle} en instalaciones de domótica en Madrid`} loading="lazy" />
+          </div>
+        </ContentBlock>
+      )}
       <FaqList title={`Preguntas frecuentes sobre ${service.title}`} faqs={service.faqs} compact />
       <ContentBlock title="Otros servicios relacionados">
         <div className="internal-links">{related.map((item) => <a href={route(`/servicios/${item.slug}`)} key={item.slug}>{item.title}</a>)}<a href={route("/#galeria")}>Ver galería de instalaciones</a><a href={route("/contacto")}>Solicitar presupuesto</a></div>

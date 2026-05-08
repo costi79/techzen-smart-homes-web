@@ -40,8 +40,11 @@ Placeholders listos para sustituir:
 - `domotic-wiring.svg`: instalaciones electricas y cableado.
 - `electrical-panel.svg`: cuadros electricos.
 - `knx-installation.svg`: KNX.
+- `knx-components-mockup.svg`: mockup propio de actuadores, pantalla tactil y botoneras KNX.
 - `loxone-installation.svg`: Loxone.
+- `loxone-components-mockup.svg`: mockup propio de Miniserver, extensiones y botonera tactil.
 - `home-assistant-dashboard.svg`: Home Assistant.
+- `shelly-modules-mockup.svg`: mockup propio de modulos Shelly Plus, Pro DIN y medicion EM.
 - `smart-lighting-scenes.svg`: iluminacion inteligente.
 - `motorized-blinds.svg`: persianas y estores motorizados.
 - `smart-climate-control.svg`: climatizacion inteligente.

@@ -1,0 +1,19 @@
+<svg width="900" height="675" viewBox="0 0 900 675" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Mockup de componentes KNX</title>
+<desc id="desc">Visual propio de TechZen con actuadores, pantalla tactil y botonera para una instalacion KNX.</desc>
+<rect width="900" height="675" fill="#07111F"/>
+<rect x="64" y="70" width="772" height="535" rx="34" fill="#0D1420" stroke="#27E5FF" stroke-opacity=".35" stroke-width="3"/>
+<rect x="112" y="135" width="250" height="350" rx="18" fill="#111B2B" stroke="#27E5FF" stroke-opacity=".5" stroke-width="3"/>
+<text x="237" y="116" text-anchor="middle" fill="#27E5FF" font-family="Arial" font-size="22" font-weight="800">ACTUADORES KNX</text>
+<g fill="#1E7BFF"><rect x="145" y="175" width="42" height="130" rx="8"/><rect x="199" y="175" width="42" height="130" rx="8"/><rect x="253" y="175" width="42" height="130" rx="8"/></g>
+<g stroke="#27E5FF" stroke-width="5" stroke-linecap="round"><path d="M145 350h165M145 388h165M145 426h165"/></g>
+<rect x="420" y="122" width="300" height="210" rx="28" fill="#07111F" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="4"/>
+<rect x="452" y="154" width="236" height="146" rx="16" fill="#12243A"/>
+<circle cx="498" cy="202" r="24" fill="#27E5FF" fill-opacity=".2"/><circle cx="570" cy="202" r="24" fill="#27E5FF" fill-opacity=".2"/><circle cx="642" cy="202" r="24" fill="#27E5FF" fill-opacity=".2"/>
+<path d="M480 260h180" stroke="#27E5FF" stroke-width="7" stroke-linecap="round"/>
+<text x="570" y="360" text-anchor="middle" fill="#fff" font-family="Arial" font-size="28" font-weight="800">Pantalla tactil</text>
+<rect x="442" y="420" width="110" height="110" rx="24" fill="#101A28" stroke="#27E5FF" stroke-opacity=".65" stroke-width="4"/>
+<rect x="585" y="420" width="110" height="110" rx="24" fill="#101A28" stroke="#27E5FF" stroke-opacity=".65" stroke-width="4"/>
+<circle cx="497" cy="475" r="18" fill="#27E5FF"/><circle cx="640" cy="475" r="18" fill="#27E5FF"/>
+<text x="570" y="575" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="34" font-weight="900">Botoneras, sensores y bus KNX</text>
+</svg>
