@@ -342,7 +342,8 @@ const legacyServiceSlugs = [
   "medicion-consumo-electrico-madrid",
 ];
 
-// Galería: usar fotos propias o placeholders neutros sin logos de terceros.
+// Politica de imagenes: no usar imagenes descargadas de webs de electricistas, instaladores,
+// empresas de domotica, KNX/Shelly/Loxone partners o competidores. Si hay duda de licencia, no se usa.
 // Para sustituir por trabajos reales, cambiar los archivos en public/images/ y mantener nombres o actualizar src.
 const galleryItems = [
   {

@@ -1,62 +1,68 @@
-# Guía de imágenes - TechZen Smart Homes
+# Guia de imagenes - TechZen Smart Homes
 
-## Dónde cambiar fotos
+## Donde cambiar fotos
 
-Las imágenes de servicios y de la galería están en:
+Las imagenes de servicios y de la galeria estan en:
 
 ```text
 public/images/
 ```
 
-El vídeo de demostración está en:
+El video de demostracion esta en:
 
 ```text
 public/videos/
 ```
 
-Si quieres sustituir una imagen por una foto real, lo más sencillo es mantener el mismo nombre de archivo. Así no hace falta tocar el código.
+Si quieres sustituir una imagen por una foto real, lo mas sencillo es mantener el mismo nombre de archivo. Asi no hace falta tocar el codigo.
+
+## Regla obligatoria de licencia
+
+- No usar imagenes descargadas de webs de electricistas, instaladores, empresas de domotica, KNX partners, Shelly partners, Loxone partners o competidores.
+- Usar solo fotos propias, bancos gratuitos con licencia comercial clara, recursos libres, mockups propios o imagenes generadas para TechZen.
+- Si hay duda sobre licencia, origen o permiso de uso comercial, no se usa.
 
 ## Reglas antes de subir fotos
 
 - Usa fotos propias o fotos con permiso comercial claro.
-- No subas imágenes de webs de empresas competidoras.
+- No subas imagenes de webs de empresas competidoras.
 - No uses fotos con marcas de agua, logos ajenos, nombres de otras empresas o textos comerciales de terceros.
-- Evita caras, matrículas, direcciones, portales, números de vivienda o datos privados.
-- Comprime las imágenes antes de subirlas para no perjudicar la velocidad.
-- Prioriza fotos horizontales, limpias y bien iluminadas para tarjetas de galería.
+- Evita caras, matriculas, direcciones, portales, numeros de vivienda o datos privados.
+- Comprime las imagenes antes de subirlas para no perjudicar la velocidad.
+- Prioriza fotos horizontales, limpias y bien iluminadas para tarjetas de galeria.
 
 ## Placeholders actuales
 
-La web usa imágenes propias del proyecto y placeholders SVG neutros creados para TechZen. No se han usado imágenes copiadas de empresas externas.
+La web usa imagenes propias del proyecto y placeholders SVG neutros creados para TechZen. No se deben usar imagenes copiadas de empresas externas.
 
 Placeholders listos para sustituir:
 
-- `domotic-wiring.svg`: instalaciones eléctricas y cableado.
-- `electrical-panel.svg`: cuadros eléctricos.
+- `domotic-wiring.svg`: instalaciones electricas y cableado.
+- `electrical-panel.svg`: cuadros electricos.
 - `knx-installation.svg`: KNX.
 - `loxone-installation.svg`: Loxone.
 - `home-assistant-dashboard.svg`: Home Assistant.
-- `smart-lighting-scenes.svg`: iluminación inteligente.
+- `smart-lighting-scenes.svg`: iluminacion inteligente.
 - `motorized-blinds.svg`: persianas y estores motorizados.
-- `smart-climate-control.svg`: climatización inteligente.
+- `smart-climate-control.svg`: climatizacion inteligente.
 - `security-sensors.svg`: seguridad y sensores.
-- `energy-monitoring.svg`: ahorro energético y medición.
-- Tarjetas de antes/después: preparadas en la web como espacios pendientes de foto real.
+- `energy-monitoring.svg`: ahorro energetico y medicion.
+- Tarjetas de antes/despues: preparadas en la web como espacios pendientes de foto real.
 
 ## Fotos reales recomendadas
 
 - Canalizaciones limpias y cableado ordenado.
-- Cuadros eléctricos antes y después.
-- Protecciones, diferenciales, magnetotérmicos y etiquetado.
-- Módulos Shelly instalados detrás de mecanismos o en cuadro.
-- Pulsadores KNX, pantallas y cuadros domóticos.
-- Loxone Miniserver o cuadros de automatización.
+- Cuadros electricos antes y despues.
+- Protecciones, diferenciales, magnetotermicos y etiquetado.
+- Modulos Shelly instalados detras de mecanismos o en cuadro.
+- Pulsadores KNX, pantallas y cuadros domoticos.
+- Loxone Miniserver o cuadros de automatizacion.
 - Dashboards de Home Assistant en tablet o pantalla.
-- Tiras LED, iluminación ambiental y escenas.
+- Tiras LED, iluminacion ambiental y escenas.
 - Persianas o estores motorizados.
 - Termostatos y sensores de temperatura.
 - Sensores de movimiento, apertura, fuga de agua o humo.
-- Medidores de consumo y gráficos energéticos.
+- Medidores de consumo y graficos energeticos.
 
 ## Consejo para SEO visual
 
@@ -68,4 +74,4 @@ instalacion-shelly-luces-madrid.jpg
 dashboard-home-assistant-vivienda.jpg
 ```
 
-Después revisa el `alt` en `src/App.jsx` para que describa la foto con naturalidad.
+Despues revisa el `alt` en `src/App.jsx` para que describa la foto con naturalidad.
