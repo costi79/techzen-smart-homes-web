@@ -662,8 +662,20 @@ function Hero() {
             ))}
           </div>
         </div>
-        <div className="device-panel" role="img" aria-label="Panel domótico con luces, seguridad, consumo y automatizaciones">
-          <div className="flex items-center justify-between border-b border-white/10 pb-5">
+        <div className="device-panel hero-video-panel" aria-label="Animación de marca TechZen Smart Homes y panel de control domótico">
+          <div className="brand-video-frame">
+            <video
+              src={asset("videos/techzen-demo-domotica.mp4")}
+              poster={asset("images/techzen-circuit-brand.jpg")}
+              muted
+              autoPlay
+              loop
+              playsInline
+              preload="metadata"
+              aria-label="Animación del nombre de TechZen Smart Homes"
+            />
+          </div>
+          <div className="mt-6 flex items-center justify-between border-b border-white/10 pb-5">
             <div>
               <p className="text-sm text-slate-400">TechZen Smart Homes</p>
               <h2 className="text-2xl font-semibold">Control total de tu vivienda</h2>

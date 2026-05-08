@@ -405,6 +405,18 @@
   .video-frame video {
     @apply aspect-video w-full bg-black object-cover;
   }
+
+  .hero-video-panel {
+    @apply p-4 sm:p-5;
+  }
+
+  .brand-video-frame {
+    @apply overflow-hidden rounded-[1.5rem] border border-cyan/20 bg-black;
+  }
+
+  .brand-video-frame video {
+    @apply aspect-video w-full bg-black object-cover;
+  }
 }
 
 .hero-grid {
