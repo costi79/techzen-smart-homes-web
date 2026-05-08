@@ -9,6 +9,7 @@ import {
   CircuitBoard,
   Cpu,
   Gauge,
+  Globe2,
   Home,
   Lightbulb,
   Mail,
@@ -43,6 +44,15 @@ const navLinks = [
   ["Shelly", "/servicios/shelly-madrid"],
   ["Blog", "/blog"],
   ["Contacto", "/contacto"],
+];
+
+const languages = [
+  { code: "es", label: "Español", short: "ES" },
+  { code: "en", label: "English", short: "EN" },
+  { code: "fr", label: "Français", short: "FR" },
+  { code: "ro", label: "Română", short: "RO" },
+  { code: "de", label: "Deutsch", short: "DE" },
+  { code: "zh-CN", label: "中文", short: "中文" },
 ];
 
 const authorityBadges = [
@@ -1053,11 +1063,44 @@ function Header() {
       <div className="container flex h-20 items-center justify-between">
         <a href={route("/")} aria-label="TechZen Smart Homes inicio"><img src={asset("logo.svg")} alt="Logo de TechZen Smart Homes" className="h-11 w-auto" /></a>
         <nav className="hidden items-center gap-6 text-sm font-medium text-slate-300 lg:flex">{navLinks.map(([label, href]) => <a className="transition hover:text-cyan" href={route(href)} key={label}>{label}</a>)}</nav>
-        <a className="hidden rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-cyan lg:inline-flex" href={whatsappHref()} target="_blank" rel="noreferrer">Pedir presupuesto</a>
+        <div className="hidden items-center gap-3 lg:flex">
+          <LanguageSelector />
+          <a className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-cyan" href={whatsappHref()} target="_blank" rel="noreferrer">Pedir presupuesto</a>
+        </div>
         <button className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white lg:hidden" aria-label="Abrir menú" aria-expanded={open} onClick={() => setOpen((value) => !value)}><Menu size={22} /></button>
       </div>
-      {open && <nav className="container grid gap-2 border-t border-white/10 pb-5 pt-3 text-sm font-medium text-slate-200 lg:hidden">{navLinks.map(([label, href]) => <a className="rounded-xl px-3 py-3 hover:bg-white/10" href={route(href)} key={label} onClick={() => setOpen(false)}>{label}</a>)}<a className="rounded-xl bg-cyan px-3 py-3 font-semibold text-ink" href={whatsappHref()} target="_blank" rel="noreferrer">WhatsApp</a></nav>}
+      {open && <nav className="container grid gap-2 border-t border-white/10 pb-5 pt-3 text-sm font-medium text-slate-200 lg:hidden">{navLinks.map(([label, href]) => <a className="rounded-xl px-3 py-3 hover:bg-white/10" href={route(href)} key={label} onClick={() => setOpen(false)}>{label}</a>)}<div className="px-3 py-2"><LanguageSelector compact /></div><a className="rounded-xl bg-cyan px-3 py-3 font-semibold text-ink" href={whatsappHref()} target="_blank" rel="noreferrer">WhatsApp</a></nav>}
     </header>
+  );
+}
+
+function LanguageSelector({ compact = false }) {
+  const [language, setLanguage] = useState("es");
+
+  useEffect(() => {
+    const saved = localStorage.getItem("techzen-language") || "es";
+    setLanguage(saved);
+    document.documentElement.lang = saved === "zh-CN" ? "zh" : saved;
+  }, []);
+
+  function handleChange(event) {
+    const next = event.target.value;
+    setLanguage(next);
+    localStorage.setItem("techzen-language", next);
+    document.documentElement.lang = next === "zh-CN" ? "zh" : next;
+
+    if (next === "es") return;
+    window.location.href = googleTranslateUrl(next);
+  }
+
+  return (
+    <label className={`language-selector ${compact ? "w-full" : ""}`}>
+      <Globe2 size={17} aria-hidden="true" />
+      <span className="sr-only">Elegir idioma</span>
+      <select value={language} onChange={handleChange} aria-label="Elegir idioma">
+        {languages.map((item) => <option value={item.code} key={item.code}>{compact ? item.label : item.short}</option>)}
+      </select>
+    </label>
   );
 }
 
@@ -1099,7 +1142,7 @@ function Footer() {
       <div className="container flex flex-col gap-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div><img src={asset("logo.svg")} alt="Logo de TechZen Smart Homes" className="h-12 w-auto" /><p className="mt-3 text-sm text-slate-400">Electricidad, KNX, Shelly, Loxone, Home Assistant y domótica profesional en Madrid.</p></div>
-          <div className="flex flex-wrap gap-4 text-sm text-slate-400"><a href={phoneHref()}>{PHONE_NUMBER}</a><a href={`mailto:${EMAIL}`}>{EMAIL}</a><span>{CITY}, España</span></div>
+          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-400"><a href={phoneHref()}>{PHONE_NUMBER}</a><a href={`mailto:${EMAIL}`}>{EMAIL}</a><span>{CITY}, España</span><LanguageSelector /></div>
         </div>
         <div className="internal-links">{serviceData.slice(0, 8).map((item) => <a href={route(`/servicios/${item.slug}`)} key={item.slug}>{item.title}</a>)}<a href={route("/blog")}>Blog</a><a href={route("/contacto")}>Contacto</a></div>
       </div>
@@ -1117,6 +1160,15 @@ function whatsappHref() {
 
 function phoneHref() {
   return `tel:${PHONE_NUMBER.replaceAll(" ", "")}`;
+}
+
+function googleTranslateUrl(targetLanguage) {
+  const basePath = base.replace(/\/$/, "");
+  const currentPath = typeof window === "undefined" ? "/" : window.location.pathname.replace(basePath, "") || "/";
+  const currentHash = typeof window === "undefined" ? "" : window.location.hash;
+  const cleanPath = currentPath.startsWith("/") ? currentPath : `/${currentPath}`;
+  const productionUrl = `${SITE_URL}${cleanPath}${currentHash}`;
+  return `https://translate.google.com/translate?sl=es&tl=${encodeURIComponent(targetLanguage)}&u=${encodeURIComponent(productionUrl)}`;
 }
 
 function setMeta(name, content) {
