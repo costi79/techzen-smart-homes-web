@@ -658,6 +658,8 @@ function Hero() {
   return (
     <section className="relative overflow-hidden pt-28 sm:pt-32 lg:pt-36">
       <div className="absolute inset-0 hero-grid opacity-60" aria-hidden="true" />
+      <div className="hero-aurora hero-aurora-one" aria-hidden="true" />
+      <div className="hero-aurora hero-aurora-two" aria-hidden="true" />
       <div className="container relative grid gap-12 pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-24">
         <div className="max-w-3xl">
           <p className="eyebrow"><Sparkles size={16} /> Electricidad, KNX, Shelly, Loxone y smart homes en Madrid</p>

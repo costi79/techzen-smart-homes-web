@@ -9,7 +9,10 @@
 
   body {
     margin: 0;
-    background: #070b12;
+    background:
+      radial-gradient(circle at top left, rgba(39, 229, 255, 0.08), transparent 34rem),
+      radial-gradient(circle at bottom right, rgba(30, 123, 255, 0.08), transparent 34rem),
+      #070b12;
   }
 
   ::selection {
@@ -37,23 +40,36 @@
   .btn-primary,
   .btn-secondary,
   .btn-ghost {
-    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition duration-300;
+    @apply relative inline-flex min-h-12 items-center justify-center gap-2 overflow-hidden rounded-full px-6 py-3 text-sm font-semibold transition duration-300;
   }
 
   .btn-primary {
-    @apply bg-cyan text-ink shadow-glow hover:bg-white;
+    @apply bg-cyan text-ink shadow-glow hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_0_70px_rgba(39,229,255,0.32)];
   }
 
   .btn-secondary {
-    @apply border border-cyan/40 bg-cyan/10 text-white hover:border-cyan hover:bg-cyan/20;
+    @apply border border-cyan/40 bg-cyan/10 text-white hover:-translate-y-0.5 hover:border-cyan hover:bg-cyan/20;
   }
 
   .btn-ghost {
-    @apply border border-white/15 text-white hover:border-white/40 hover:bg-white/10;
+    @apply border border-white/15 text-white hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10;
+  }
+
+  .btn-primary::before,
+  .btn-secondary::before,
+  .btn-ghost::before {
+    content: "";
+    @apply pointer-events-none absolute inset-y-0 -left-1/2 w-1/2 skew-x-[-18deg] bg-white/30 opacity-0 transition duration-500;
+  }
+
+  .btn-primary:hover::before,
+  .btn-secondary:hover::before,
+  .btn-ghost:hover::before {
+    @apply left-[120%] opacity-100;
   }
 
   .mini-proof {
-    @apply flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-slate-200;
+    @apply flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-slate-200 transition duration-300 hover:-translate-y-0.5 hover:border-cyan/35 hover:bg-cyan/10;
   }
 
   .language-selector {
@@ -77,11 +93,16 @@
   }
 
   .device-panel {
-    @apply rounded-[2rem] border border-white/10 bg-panel/90 p-6 shadow-glow backdrop-blur-xl sm:p-8;
+    @apply relative overflow-hidden rounded-[2rem] border border-white/10 bg-panel/90 p-6 shadow-glow backdrop-blur-xl sm:p-8;
+  }
+
+  .device-panel::after {
+    content: "";
+    @apply pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-cyan/70 to-transparent;
   }
 
   .metric {
-    @apply rounded-2xl border border-white/10 bg-white/[0.04] p-4;
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] p-4 transition duration-300 hover:border-cyan/35 hover:bg-cyan/10;
   }
 
   .metric svg {
@@ -108,7 +129,30 @@
   .logo-card,
   .gallery-card,
   .post-card {
-    @apply border border-white/10 bg-white/[0.045] shadow-[0_16px_60px_rgba(0,0,0,0.22)] backdrop-blur;
+    @apply relative border border-white/10 bg-white/[0.045] shadow-[0_16px_60px_rgba(0,0,0,0.22)] backdrop-blur;
+  }
+
+  .smart-card::before,
+  .service-card::before,
+  .case-card::before,
+  .step-card::before,
+  .feature-block::before,
+  .logo-card::before,
+  .gallery-card::before,
+  .post-card::before {
+    content: "";
+    @apply pointer-events-none absolute inset-0 rounded-[inherit] bg-[radial-gradient(circle_at_top_left,rgba(39,229,255,0.14),transparent_42%)] opacity-0 transition duration-500;
+  }
+
+  .smart-card:hover::before,
+  .service-card:hover::before,
+  .case-card:hover::before,
+  .step-card:hover::before,
+  .feature-block:hover::before,
+  .logo-card:hover::before,
+  .gallery-card:hover::before,
+  .post-card:hover::before {
+    @apply opacity-100;
   }
 
   .smart-card {
@@ -116,7 +160,7 @@
   }
 
   .service-card {
-    @apply rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan/40 hover:bg-white/[0.07];
+    @apply rounded-2xl p-6 transition duration-300 hover:-translate-y-2 hover:border-cyan/40 hover:bg-white/[0.07] hover:shadow-[0_22px_80px_rgba(39,229,255,0.12)];
   }
 
   .service-card h3 {
@@ -254,7 +298,7 @@
   }
 
   .logo-card {
-    @apply rounded-2xl p-5 transition hover:border-cyan/40 hover:bg-white/[0.07];
+    @apply overflow-hidden rounded-2xl p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan/40 hover:bg-white/[0.07];
   }
 
   .logo-card img {
@@ -270,11 +314,11 @@
   }
 
   .gallery-card {
-    @apply overflow-hidden rounded-2xl;
+    @apply overflow-hidden rounded-2xl transition duration-300 hover:-translate-y-2 hover:border-cyan/40 hover:shadow-[0_22px_80px_rgba(39,229,255,0.12)];
   }
 
   .gallery-card img {
-    @apply aspect-[4/3] w-full object-cover;
+    @apply aspect-[4/3] w-full object-cover transition duration-700 hover:scale-105;
   }
 
   .gallery-card figcaption {
@@ -379,7 +423,7 @@
   }
 
   .post-card {
-    @apply rounded-2xl p-6 transition hover:-translate-y-1 hover:border-cyan/40 hover:bg-white/[0.07];
+    @apply rounded-2xl p-6 transition duration-300 hover:-translate-y-2 hover:border-cyan/40 hover:bg-white/[0.07];
   }
 
   .post-card svg {
@@ -415,7 +459,7 @@
   }
 
   .floating-whatsapp {
-    @apply fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full bg-cyan px-5 py-3 text-sm font-bold text-ink shadow-glow transition hover:bg-white;
+    @apply fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full bg-cyan px-5 py-3 text-sm font-bold text-ink shadow-glow transition hover:-translate-y-1 hover:bg-white;
   }
 
   .video-frame {
@@ -431,7 +475,12 @@
   }
 
   .brand-video-frame {
-    @apply overflow-hidden rounded-[1.5rem] border border-cyan/20 bg-black;
+    @apply relative overflow-hidden rounded-[1.5rem] border border-cyan/20 bg-black;
+  }
+
+  .brand-video-frame::after {
+    content: "";
+    @apply pointer-events-none absolute inset-0 bg-gradient-to-tr from-cyan/10 via-transparent to-electric/10;
   }
 
   .brand-video-frame video {
@@ -447,9 +496,66 @@
   mask-image: linear-gradient(to bottom, black, transparent 78%);
 }
 
+.hero-aurora {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 9999px;
+  filter: blur(36px);
+  opacity: 0.42;
+  mix-blend-mode: screen;
+}
+
+.hero-aurora-one {
+  top: 7rem;
+  right: 8%;
+  width: 20rem;
+  height: 20rem;
+  background: rgba(39, 229, 255, 0.2);
+}
+
+.hero-aurora-two {
+  left: 5%;
+  bottom: 6rem;
+  width: 16rem;
+  height: 16rem;
+  background: rgba(30, 123, 255, 0.18);
+}
+
+.eyebrow svg,
+.icon-wrap svg,
+.trust-badge,
+.logo-card img {
+  will-change: transform;
+}
+
 @media (prefers-reduced-motion: no-preference) {
+  .hero-grid {
+    animation: grid-drift 22s linear infinite;
+  }
+
+  .hero-aurora-one {
+    animation: aurora-drift 11s ease-in-out infinite;
+  }
+
+  .hero-aurora-two {
+    animation: aurora-drift 13s ease-in-out infinite reverse;
+  }
+
   .device-panel {
     animation: float-panel 7s ease-in-out infinite;
+  }
+
+  .brand-video-frame {
+    animation: glow-breathe 5.5s ease-in-out infinite;
+  }
+
+  .floating-whatsapp {
+    animation: whatsapp-pulse 3.4s ease-in-out infinite;
+  }
+
+  .eyebrow svg,
+  .icon-wrap svg {
+    animation: icon-spark 4.6s ease-in-out infinite;
   }
 
   .smart-card,
@@ -457,6 +563,72 @@
   .step-card,
   .feature-block {
     animation: soft-rise 0.7s ease both;
+  }
+
+  .service-card:nth-child(2n),
+  .gallery-card:nth-child(2n),
+  .logo-card:nth-child(2n) {
+    animation-delay: 90ms;
+  }
+
+  .service-card:nth-child(3n),
+  .gallery-card:nth-child(3n),
+  .logo-card:nth-child(3n) {
+    animation-delay: 170ms;
+  }
+}
+
+@keyframes grid-drift {
+  from {
+    background-position: 0 0, 0 0;
+  }
+
+  to {
+    background-position: 48px 48px, 48px 48px;
+  }
+}
+
+@keyframes aurora-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(22px, -18px, 0) scale(1.08);
+  }
+}
+
+@keyframes glow-breathe {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(39, 229, 255, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 42px rgba(39, 229, 255, 0.16);
+  }
+}
+
+@keyframes whatsapp-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 36px rgba(39, 229, 255, 0.18);
+  }
+
+  50% {
+    box-shadow: 0 0 58px rgba(39, 229, 255, 0.34);
+  }
+}
+
+@keyframes icon-spark {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(-4deg) scale(1.08);
   }
 }
 
