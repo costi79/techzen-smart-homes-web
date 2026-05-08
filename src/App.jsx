@@ -139,10 +139,10 @@ const serviceData = [
     metaTitle: "Instalación Shelly Madrid | Shelly Partner Verified",
     metaDescription: "Instalación Shelly en Madrid: Shelly Plus, Shelly Pro, Shelly EM, relés, medición de consumo, control local, escenas y automatización sin grandes obras.",
     short: "Relés Shelly, Shelly Plus, Shelly Pro, Shelly EM, consumo, escenas y automatización sin grandes obras.",
-    detail: "Shelly permite modernizar viviendas existentes manteniendo mecanismos habituales. Integramos relés, medidores, sensores y módulos Pro revisando cargas, neutros, espacio, temperatura y seguridad eléctrica. También podemos unir Shelly con Home Assistant, Apple Home o Google Home.",
-    benefits: ["Automatización con obra mínima", "Control local y remoto", "Medición de consumo con Shelly EM o Plug", "Integración con escenas y asistentes"],
-    examples: ["Automatizar luces sin cambiar toda la instalación", "Recibir aviso si un electrodoméstico consume más de lo esperado", "Controlar persianas por horario, sol o temperatura"],
-    process: ["Revisión de mecanismos y cuadro", "Selección de módulo Shelly adecuado", "Instalación, configuración y pruebas"],
+    detail: "Shelly permite modernizar viviendas existentes manteniendo mecanismos habituales. Integramos relés Shelly Plus para luces y persianas, equipos Shelly Pro en carril DIN, medidores Shelly EM/Pro EM y escenas locales revisando cargas, neutros, espacio, temperatura, WiFi/Ethernet y seguridad eléctrica. También podemos unir Shelly con Home Assistant, Apple Home o Google Home.",
+    benefits: ["Automatización con obra mínima", "Control local y remoto con escenas", "Medición de consumo con Shelly EM, Pro EM o Plug", "Integración con MQTT, Home Assistant y asistentes", "Opciones DIN para cuadros eléctricos profesionales"],
+    examples: ["Automatizar luces sin cambiar toda la instalación", "Medir dos circuitos y detectar consumos anómalos", "Controlar persianas por horario, sol o temperatura", "Usar Shelly Pro en cuadro para cargas ordenadas y documentadas"],
+    process: ["Revisión de mecanismos, cuadro y cobertura", "Selección de módulo Shelly según carga y uso", "Instalación, configuración local, pruebas y explicación"],
     faqs: [
       ["¿Shelly funciona sin Internet?", "Muchos usos pueden funcionar en red local, especialmente si se integra con Home Assistant."],
       ["¿Es seguro meter un relé detrás de un mecanismo?", "Sí, si hay espacio, cableado correcto, carga compatible y se instala con criterio eléctrico."],
@@ -158,10 +158,10 @@ const serviceData = [
     metaTitle: "Instalador KNX Madrid | KNX Partner TechZen",
     metaDescription: "Instalador KNX Partner en Madrid para iluminación, persianas, climatización, escenas, sensores, pantallas y control centralizado en viviendas premium.",
     short: "Sistema profesional, robusto y escalable para viviendas y edificios con control centralizado.",
-    detail: "KNX es un estándar profesional para proyectos que necesitan fiabilidad, vida útil y ampliación futura. Como KNX Partner, TechZen Smart Homes puede diseñar soluciones para iluminación, persianas, climatización, escenas, sensores y visualizaciones con una arquitectura sólida.",
-    benefits: ["Estándar abierto y profesional", "Ideal para obra nueva o reforma integral", "Muy robusto para viviendas premium", "Integrable con Home Assistant y visualizaciones"],
-    examples: ["Pulsadores KNX que controlan luz, persianas y escenas", "Climatización por zonas con sensores", "Escena salida que apaga, baja persianas y activa seguridad"],
-    process: ["Diseño de arquitectura KNX", "Planificación de cuadros y cableado", "Programación, pruebas y documentación"],
+    detail: "KNX es un estándar internacional de automatización de viviendas y edificios, pensado para instalaciones estables, seguras, conectadas y ampliables. Como KNX Partner, TechZen Smart Homes diseña arquitectura de bus, cuadros, actuadores, sensores, pulsadores, escenas, climatización por zonas y visualizaciones con ETS, priorizando documentación y mantenimiento futuro.",
+    benefits: ["Estándar abierto y profesional", "Más de 500 fabricantes y miles de productos certificados", "Ideal para obra nueva o reforma integral", "Muy robusto para viviendas premium", "Integrable con Home Assistant, pantallas y visualizaciones"],
+    examples: ["Pulsadores KNX que controlan luz, persianas y escenas", "Climatización por zonas con sensores", "Escena salida que apaga, baja persianas y activa seguridad", "Cuadro KNX documentado para futuras ampliaciones"],
+    process: ["Diseño de arquitectura KNX y funciones", "Planificación de bus, cuadros y cableado", "Programación ETS, pruebas, documentación y entrega"],
     faqs: [
       ["¿KNX es mejor que Shelly?", "No siempre. KNX es ideal en proyectos cableados y reformas importantes; Shelly encaja muy bien en viviendas existentes."],
       ["¿Puedo tener KNX y Home Assistant?", "Sí. Home Assistant puede aportar paneles e integraciones sobre una base KNX robusta."],
@@ -177,10 +177,10 @@ const serviceData = [
     metaTitle: "Loxone Madrid | Automatización residencial avanzada",
     metaDescription: "Integración Loxone en Madrid con Miniserver, escenas, iluminación, climatización, seguridad, eficiencia energética y control centralizado.",
     short: "Automatización avanzada con Miniserver, escenas, eficiencia, iluminación y control centralizado.",
-    detail: "Loxone encaja en viviendas que buscan automatización integrada y lógica centralizada. Permite coordinar iluminación, persianas, clima, seguridad, energía y escenas para que la casa reaccione de forma inteligente sin depender de acciones manuales constantes.",
-    benefits: ["Control centralizado", "Automatizaciones avanzadas", "Buen enfoque para viviendas premium", "Escenas y eficiencia energética"],
-    examples: ["Escena cine con luces reguladas y persianas", "Control de clima por presencia y horario", "Automatizaciones de ahorro energético con cargas no prioritarias"],
-    process: ["Definir objetivos de automatización", "Diseño de entradas, salidas y escenas", "Configuración y ajuste fino en vivienda"],
+    detail: "Loxone encaja en viviendas que buscan automatización integrada con lógica centralizada. El Miniserver coordina iluminación, persianas, clima, accesos, seguridad, energía, audio y escenas para que la casa actúe de forma automática según presencia, horario, temperatura, consumo o modo de uso.",
+    benefits: ["Control centralizado con Miniserver", "Automatizaciones avanzadas sin depender de acciones constantes", "Buen enfoque para viviendas premium y proyectos escalables", "Escenas, sombreado, clima y eficiencia energética conectados", "Opciones cableadas y ampliables para reformas o obra nueva"],
+    examples: ["Escena cine con luces reguladas y persianas", "Control de clima por presencia, horario y temperatura", "Automatizaciones de ahorro energético con cargas no prioritarias", "Sombreado automático para reducir calor y consumo"],
+    process: ["Definir objetivos y lógica de automatización", "Diseño de entradas, salidas, extensiones y escenas", "Configuración, ajuste fino en vivienda y explicación al cliente"],
     faqs: [
       ["¿Loxone sustituye a otros sistemas?", "Puede funcionar como sistema principal o integrarse con otras soluciones según el proyecto."],
       ["¿Es una solución para vivienda premium?", "Sí, especialmente cuando se busca control centralizado y automatización muy integrada."],
@@ -591,6 +591,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-ink text-white">
+      <GoogleTranslateMount />
       <Header />
       <main>
         {currentPath === "/" && <HomePage />}
@@ -1078,7 +1079,7 @@ function LanguageSelector({ compact = false }) {
   const [language, setLanguage] = useState("es");
 
   useEffect(() => {
-    const saved = localStorage.getItem("techzen-language") || "es";
+    const saved = readSelectedLanguage();
     setLanguage(saved);
     document.documentElement.lang = saved === "zh-CN" ? "zh" : saved;
   }, []);
@@ -1089,8 +1090,14 @@ function LanguageSelector({ compact = false }) {
     localStorage.setItem("techzen-language", next);
     document.documentElement.lang = next === "zh-CN" ? "zh" : next;
 
-    if (next === "es") return;
-    window.location.href = googleTranslateUrl(next);
+    if (next === "es") {
+      clearGoogleTranslateCookie();
+      window.location.reload();
+      return;
+    }
+
+    setGoogleTranslateCookie(next);
+    window.location.reload();
   }
 
   return (
@@ -1102,6 +1109,28 @@ function LanguageSelector({ compact = false }) {
       </select>
     </label>
   );
+}
+
+function GoogleTranslateMount() {
+  useEffect(() => {
+    window.googleTranslateElementInit = () => {
+      if (!window.google?.translate?.TranslateElement) return;
+      new window.google.translate.TranslateElement({
+        pageLanguage: "es",
+        includedLanguages: languages.filter((item) => item.code !== "es").map((item) => item.code).join(","),
+        autoDisplay: false,
+      }, "google_translate_element");
+    };
+
+    if (!document.querySelector('script[src*="translate_a/element.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
+  return <div id="google_translate_element" className="google-translate-mount" aria-hidden="true" />;
 }
 
 function Section({ id, eyebrow, title, intro, children }) {
@@ -1162,13 +1191,23 @@ function phoneHref() {
   return `tel:${PHONE_NUMBER.replaceAll(" ", "")}`;
 }
 
-function googleTranslateUrl(targetLanguage) {
-  const basePath = base.replace(/\/$/, "");
-  const currentPath = typeof window === "undefined" ? "/" : window.location.pathname.replace(basePath, "") || "/";
-  const currentHash = typeof window === "undefined" ? "" : window.location.hash;
-  const cleanPath = currentPath.startsWith("/") ? currentPath : `/${currentPath}`;
-  const productionUrl = `${SITE_URL}${cleanPath}${currentHash}`;
-  return `https://translate.google.com/translate?sl=es&tl=${encodeURIComponent(targetLanguage)}&u=${encodeURIComponent(productionUrl)}`;
+function readSelectedLanguage() {
+  if (typeof document === "undefined") return "es";
+  const match = document.cookie.match(/(?:^|;\s*)googtrans=\/es\/([^;]+)/);
+  return decodeURIComponent(match?.[1] || localStorage.getItem("techzen-language") || "es");
+}
+
+function setGoogleTranslateCookie(targetLanguage) {
+  const value = `/es/${targetLanguage}`;
+  const maxAge = 60 * 60 * 24 * 365;
+  document.cookie = `googtrans=${value};path=/;max-age=${maxAge}`;
+  document.cookie = `googtrans=${value};path=/;domain=${window.location.hostname};max-age=${maxAge}`;
+}
+
+function clearGoogleTranslateCookie() {
+  document.cookie = "googtrans=;path=/;max-age=0";
+  document.cookie = `googtrans=;path=/;domain=${window.location.hostname};max-age=0`;
+  localStorage.removeItem("techzen-language");
 }
 
 function setMeta(name, content) {
