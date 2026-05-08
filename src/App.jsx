@@ -118,7 +118,7 @@ const serviceData = [
       ["¿La domótica obliga a cambiar toda la casa?", "No. Se puede empezar por luces, persianas o consumo y ampliar después."],
       ["¿Se puede controlar desde fuera de casa?", "Sí, con una configuración segura y manteniendo funciones locales cuando sea posible."],
     ],
-    image: "images/basic-home-automation.jpg",
+    image: "images/motorized-blinds.svg",
   },
   {
     slug: "shelly-madrid",
@@ -251,7 +251,7 @@ const serviceData = [
       ["¿Se puede controlar aire acondicionado?", "En muchos casos sí, con pasarelas, IR, termostatos o integraciones compatibles."],
       ["¿Ayuda a ahorrar?", "Sí, sobre todo cuando se combina con presencia, horarios, ventanas y medición de consumo."],
     ],
-    image: "images/techzen-smart-home-brand.jpg",
+    image: "images/smart-climate-control.svg",
   },
   {
     slug: "seguridad-sensores-madrid",
@@ -270,7 +270,7 @@ const serviceData = [
       ["¿Instaláis cámaras?", "Podemos valorar cámaras e integración con paneles o avisos, siempre respetando privacidad y normativa."],
       ["¿Los sensores pueden activar luces?", "Sí, por presencia, horario, modo noche o seguridad."],
     ],
-    image: "images/techzen-circuit-brand.jpg",
+    image: "images/security-sensors.svg",
   },
   {
     slug: "medicion-consumo-electrico-madrid",
@@ -289,7 +289,7 @@ const serviceData = [
       ["¿Puedo medir circuitos concretos?", "Sí. Se puede medir climatización, termo, cocina, garaje, iluminación u otros circuitos."],
       ["¿Necesito Home Assistant?", "No siempre, pero ayuda mucho a visualizar históricos, crear avisos y combinar datos con automatizaciones."],
     ],
-    image: "images/shelly-plug-consumo.jpg",
+    image: "images/energy-monitoring.svg",
   },
   {
     slug: "automatizacion-garaje-madrid",
@@ -342,6 +342,8 @@ const legacyServiceSlugs = [
   "medicion-consumo-electrico-madrid",
 ];
 
+// Galería: usar fotos propias o placeholders neutros sin logos de terceros.
+// Para sustituir por trabajos reales, cambiar los archivos en public/images/ y mantener nombres o actualizar src.
 const galleryItems = [
   {
     category: "Instalaciones eléctricas",
@@ -404,7 +406,7 @@ const galleryItems = [
     title: "Control de iluminación desde pulsador y móvil",
     text: "Escenas, regulación, horarios y control desde app sin perder el uso normal.",
     alt: "Control de iluminación inteligente desde el móvil en Madrid",
-    src: "images/control-luces-app.jpg",
+    src: "images/smart-lighting-scenes.svg",
     link: "/servicios/iluminacion-inteligente-madrid",
   },
   {
@@ -412,7 +414,7 @@ const galleryItems = [
     title: "Escenas de luz, persianas y confort",
     text: "Preparado para horarios, modo salida, protección solar y simulación de presencia.",
     alt: "Control de persianas y escenas en una casa inteligente",
-    src: "images/basic-home-automation.jpg",
+    src: "images/motorized-blinds.svg",
     link: "/servicios/persianas-estores-motorizados-madrid",
   },
   {
@@ -420,7 +422,7 @@ const galleryItems = [
     title: "Confort conectado con sensores y horarios",
     text: "Control de clima para reducir consumo y mejorar confort sin complicar el uso diario.",
     alt: "Climatización inteligente con sensores y horarios",
-    src: "images/techzen-smart-home-brand.jpg",
+    src: "images/smart-climate-control.svg",
     link: "/servicios/climatizacion-inteligente-madrid",
   },
   {
@@ -428,7 +430,7 @@ const galleryItems = [
     title: "Sensores, avisos y escenas de seguridad",
     text: "Movimiento, puertas, fugas, humo y notificaciones integradas con la vivienda.",
     alt: "Seguridad inteligente con sensores para vivienda en Madrid",
-    src: "images/techzen-circuit-brand.jpg",
+    src: "images/security-sensors.svg",
     link: "/servicios/seguridad-sensores-madrid",
   },
   {
@@ -436,7 +438,7 @@ const galleryItems = [
     title: "Medición de consumo eléctrico para mejorar el ahorro",
     text: "Datos reales para detectar picos, controlar cargas y ajustar hábitos.",
     alt: "Medición de consumo eléctrico para ahorro energético con domótica",
-    src: "images/shelly-plug-consumo.jpg",
+    src: "images/energy-monitoring.svg",
     link: "/servicios/medicion-consumo-electrico-madrid",
   },
   {
