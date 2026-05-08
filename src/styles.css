@@ -92,6 +92,24 @@
     @apply sr-only;
   }
 
+  .hide-google-translate body {
+    top: 0 !important;
+  }
+
+  .goog-te-banner-frame,
+  .goog-te-balloon-frame,
+  .goog-te-gadget,
+  .goog-te-combo,
+  iframe.skiptranslate,
+  body > .skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
   .device-panel {
     @apply relative overflow-hidden rounded-[2rem] border border-white/10 bg-panel/90 p-6 shadow-glow backdrop-blur-xl sm:p-8;
   }

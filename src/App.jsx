@@ -1121,7 +1121,9 @@ function GoogleTranslateMount() {
         pageLanguage: "es",
         includedLanguages: languages.filter((item) => item.code !== "es").map((item) => item.code).join(","),
         autoDisplay: false,
+        layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
       }, "google_translate_element");
+      hideGoogleTranslateChrome();
     };
 
     if (!document.querySelector('script[src*="translate_a/element.js"]')) {
@@ -1130,6 +1132,9 @@ function GoogleTranslateMount() {
       script.async = true;
       document.body.appendChild(script);
     }
+
+    const timer = window.setInterval(hideGoogleTranslateChrome, 500);
+    return () => window.clearInterval(timer);
   }, []);
 
   return <div id="google_translate_element" className="google-translate-mount" aria-hidden="true" />;
@@ -1210,6 +1215,15 @@ function clearGoogleTranslateCookie() {
   document.cookie = "googtrans=;path=/;max-age=0";
   document.cookie = `googtrans=;path=/;domain=${window.location.hostname};max-age=0`;
   localStorage.removeItem("techzen-language");
+}
+
+function hideGoogleTranslateChrome() {
+  document.body.style.top = "0px";
+  document.documentElement.classList.add("hide-google-translate");
+
+  document.querySelectorAll(".goog-te-banner-frame, .goog-te-balloon-frame, iframe.skiptranslate").forEach((item) => {
+    item.setAttribute("style", "display: none !important; visibility: hidden !important;");
+  });
 }
 
 function setMeta(name, content) {
